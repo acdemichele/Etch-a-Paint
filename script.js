@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const changeGridSizeButton = document.querySelector(
     "#change-board-size-button"
   );
-  const rainbowButton = document.querySelector("#rainbow-button");
 
   resetButton.addEventListener("click", () => {
     const squares = document.querySelectorAll(".square");
@@ -41,7 +40,7 @@ function initializeCanvas(board, gridSize = 16) {
     square.style.minWidth = `calc(100% / ${gridSize})`;
     square.style.height = `calc(100% / ${gridSize})`;
 
-    square.addEventListener("mouseover", (e) => {
+    square.addEventListener("mouseover", () => {
       square.style.background = "black";
     });
     board.appendChild(square);
