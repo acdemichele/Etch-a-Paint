@@ -1,0 +1,101 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensures padding and border are included in total width and height */
+  margin: 0; /* Reset default margin for all elements */
+}
+
+body {
+  font-family: "DotGothic16", sans-serif; /* Consistent font-family */
+  line-height: 1.5; /* Accessible line-height improves readability */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(assets/8bitbackground.jpg);
+  background-size: cover;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; /* Ensure media elements are responsive */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Inherit font styles for form elements */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+#root,
+#__next {
+  isolation: isolate; /* Create a root stacking context, useful for complex layouts */
+}
+
+/* Specific Component Styles */
+#header,
+#controls,
+#footer {
+  /* Unified border style for components */
+  width: auto; /* Flexibility in width */
+  display: flex; /* Centered layout */
+  margin: 20px;
+}
+
+#header {
+  align-items: center;
+  background-color: aliceblue; /* Center items vertically in header */
+  border: 2px solid rgb(193, 218, 254);
+  border-radius: 5px;
+}
+
+#controls {
+  align-items: center; /* Center items vertically in
+  controls */
+  gap: 10px;
+  justify-content: center;
+  width: 40vw; /* Control the width relative to the viewport width */
+  height: auto; /* Control the height relative to the viewport height */
+}
+
+#main {
+  border: 40px solid rgb(139, 40, 40);
+  border-radius: 5%;
+  background-color: rgb(227, 240, 240);
+  box-shadow: 10px 10px 2px rgb(94, 28, 28); /* Shadow for depth */
+  height: 70vh;
+  width: 50vw;
+}
+
+#canvas-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+#footer {
+  justify-content: center;
+  align-items: flex-end;
+  height: 5vh;
+  margin-top: 30px;
+  width: 80vw; /* Control width for footer */
+}
